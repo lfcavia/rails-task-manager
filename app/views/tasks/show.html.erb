@@ -1,0 +1,11 @@
+<h1>This is the task</h1>
+
+<h2><input type="checkbox" <%= "checked" if @task.completed %> disabled><%= @task.title %></h2>
+
+<p><%= @task.details %></p>
+
+<p><%= link_to "Back to home", root_path %></p>
+
+<p><%= link_to "Edit task", edit_task_path(@task) %></p>
+
+<p><%= link_to "Delete task", delete_path(@task), data: {turbo_method: :delete, turbo_confirm: "Confirm delete"} %></p>
